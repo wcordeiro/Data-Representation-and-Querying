@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hacker News API</title>
+</head>
+
+<body>
+
+  <h1>Here's what Hacker News sent:</h1>
+
+  <p id="hn"></p>
+    
+    <script type="text/javascript" src="jquery.js"></script>    
+ 
+  <script type="text/javascript">
+      
+      var url = "https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty";
+      
+      jQuery.get(url,function(data){
+          console.log(data);
+      });
+
+  </script>
+</body>
+
+</html>

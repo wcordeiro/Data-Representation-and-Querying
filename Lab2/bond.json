@@ -1,0 +1,222 @@
+[
+  {
+    "Title":"A View to a Kill",
+    "Year":1985,
+    "007 Actor":"Roger Moore",
+    "Director":"John Glen",
+    "M actor":"Robert Brown",
+    "Total Box Office":78753618,
+    "Production Cost":14972170,
+    "Inflation measurement":2.003717465
+  },
+  {
+    "Title":"Casino Royale",
+    "Year":2006,
+    "007 Actor":"Daniel Craig",
+    "Director":"Martin Campbell",
+    "M actor":"Judi Densh",
+    "Total Box Office":560297409,
+    "Production Cost":140261367,
+    "Inflation measurement":1.069432038
+  },
+  {
+    "Title":"Diamonds Are Forever",
+    "Year":1971,
+    "007 Actor":"Sean Connery",
+    "Director":"Guy Hamilton",
+    "M actor":"Bernard Lee",
+    "Total Box Office":21790352,
+    "Production Cost":1352504,
+    "Inflation measurement":5.323456784
+  },
+  {
+    "Title":"Die Another Day",
+    "Year":2002,
+    "007 Actor":"Pierce Brosnan",
+    "Director":"Lee Tamahori",
+    "M actor":"Judi Densh",
+    "Total Box Office":380493506,
+    "Production Cost":118487013,
+    "Inflation measurement":1.198443579
+  },
+  {
+    "Title":"Dr. No",
+    "Year":1962,
+    "007 Actor":"Sean Connery",
+    "Director":"Terence Young",
+    "M actor":"Bernard Lee",
+    "Total Box Office":8348423,
+    "Production Cost":168089,
+    "Inflation measurement":7.139072836
+  },
+  {
+    "Title":"For Your Eyes Only",
+    "Year":1981,
+    "007 Actor":"Roger Moore",
+    "Director":"John Glen",
+    "M actor":"Robert Brown",
+    "Total Box Office":85503873,
+    "Production Cost":11805268,
+    "Inflation measurement":2.371822382
+  },
+  {
+    "Title":"From Russia with Love",
+    "Year":1963,
+    "007 Actor":"Sean Connery",
+    "Director":"Terence Young",
+    "M actor":"Bernard Lee",
+    "Total Box Office":11198237,
+    "Production Cost":354823,
+    "Inflation measurement":7.045751622
+  },
+  {
+    "Title":"GoldenEye",
+    "Year":1995,
+    "007 Actor":"Pierce Brosnan",
+    "Director":"Martin Campbell",
+    "M actor":"Judi Densh",
+    "Total Box Office":249805937,
+    "Production Cost":42411873,
+    "Inflation measurement":1.414698161
+  },
+  {
+    "Title":"Goldfinger",
+    "Year":1964,
+    "007 Actor":"Sean Connery",
+    "Director":"Guy Hamilton",
+    "M actor":"Bernard Lee",
+    "Total Box Office":17958719,
+    "Production Cost":503246,
+    "Inflation measurement":6.954838703
+  },
+  {
+    "Title":"Licence to Kill",
+    "Year":1989,
+    "007 Actor":"Timothy Dalton",
+    "Director":"John Glen",
+    "M actor":"Robert Brown",
+    "Total Box Office":89836734,
+    "Production Cost":24155844,
+    "Inflation measurement":1.738709673
+  },
+  {
+    "Title":"Live and Let Die",
+    "Year":1973,
+    "007 Actor":"Roger Moore",
+    "Director":"Guy Hamilton",
+    "M actor":"Bernard Lee",
+    "Total Box Office":33320593,
+    "Production Cost":2471243,
+    "Inflation measurement":4.855855853
+  },
+  {
+    "Title":"Moonraker",
+    "Year":1979,
+    "007 Actor":"Roger Moore",
+    "Director":"Lewis Gilbert",
+    "M actor":"Bernard Lee",
+    "Total Box Office":70815306,
+    "Production Cost":11448979,
+    "Inflation measurement":2.969696966
+  },
+  {
+    "Title":"Octopussy",
+    "Year":1983,
+    "007 Actor":"Roger Moore",
+    "Director":"John Glen",
+    "M actor":"Robert Brown",
+    "Total Box Office":86618738,
+    "Production Cost":12704081,
+    "Inflation measurement":2.164658629
+  },
+  {
+    "Title":"On Her Majesty's Secret Service",
+    "Year":1969,
+    "007 Actor":"George Lazenby",
+    "Director":"Peter R. Hunt",
+    "M actor":"Bernard Lee",
+    "Total Box Office":14877458,
+    "Production Cost":1191558,
+    "Inflation measurement":5.874659394
+  },
+  {
+    "Title":"Quantum of Solace",
+    "Year":2008,
+    "007 Actor":"Daniel Craig",
+    "Director":"Marc Forster",
+    "M actor":"Judi Densh",
+    "Total Box Office":515588687,
+    "Production Cost":230000000,
+    "Inflation measurement":1
+  },
+  {
+    "Title":"The Living Daylights",
+    "Year":1987,
+    "007 Actor":"Timothy Dalton",
+    "Director":"John Glen",
+    "M actor":"Robert Brown",
+    "Total Box Office":100743599,
+    "Production Cost":21076066,
+    "Inflation measurement":1.897887322
+  },
+  {
+    "Title":"The Man with the Golden Gun",
+    "Year":1974,
+    "007 Actor":"Roger Moore",
+    "Director":"Guy Hamilton",
+    "M actor":"Bernard Lee",
+    "Total Box Office":22317625,
+    "Production Cost":2972634,
+    "Inflation measurement":4.373225143
+  },
+  {
+    "Title":"The Spy Who Loved Me",
+    "Year":1977,
+    "007 Actor":"Roger Moore",
+    "Director":"Lewis Gilbert",
+    "M actor":"Bernard Lee",
+    "Total Box Office":52645547,
+    "Production Cost":7870129,
+    "Inflation measurement":3.557755771
+  },
+  {
+    "Title":"The World Is Not Enough",
+    "Year":1999,
+    "007 Actor":"Pierce Brosnan",
+    "Director":"Michael Apted",
+    "M actor":"Judi Densh",
+    "Total Box Office":301363636,
+    "Production Cost":104318181,
+    "Inflation measurement":1.294117646
+  },
+  {
+    "Title":"Thunderball",
+    "Year":1965,
+    "007 Actor":"Sean Connery",
+    "Director":"Terence Young",
+    "M actor":"Bernard Lee",
+    "Total Box Office":20629870,
+    "Production Cost":1607142,
+    "Inflation measurement":6.844444441
+  },
+  {
+    "Title":"Tomorrow Never Dies",
+    "Year":1997,
+    "007 Actor":"Pierce Brosnan",
+    "Director":"Roger Spottiswoode",
+    "M actor":"Judi Densh",
+    "Total Box Office":258020872,
+    "Production Cost":81887755,
+    "Inflation measurement":1.343302178
+  },
+  {
+    "Title":"You Only Live Twice",
+    "Year":1967,
+    "007 Actor":"Sean Connery",
+    "Director":"Lewis Gilbert",
+    "M actor":"Bernard Lee",
+    "Total Box Office":17288682,
+    "Production Cost":1471706,
+    "Inflation measurement":6.455089812
+  }
+]

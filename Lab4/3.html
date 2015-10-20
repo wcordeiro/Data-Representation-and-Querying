@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hacker News API</title>
+</head>
+
+<body>
+
+  <h1>Here's what Hacker News sent:</h1>
+
+  <p id="hn"></p>
+ 
+  <script type="text/javascript">
+
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+
+      if (xmlhttp.readyState == 4){
+        document.getElementById("hn").innerHTML = JSON.parse(xmlhttp.responseText);
+        var objJson = JSON.parse(xmlhttp.responseText);
+        console.log(objJson[0]);
+          
+        //Second AJAX call  
+        var url  = "https://hacker-news.firebaseio.com/v0/item/"+objJson[0]+".json?print=pretty";  
+        console.log(url);
+        var xmlhttp2 = new XMLHttpRequest();  
+          
+        xmlhttp2.onreadystatechange = function() {
+            if (xmlhttp2.readyState == 4){
+                document.getElementById("hn").innerHTML = xmlhttp2.responseText;
+                console.log(JSON.parse(xmlhttp2.responseText));
+            }
+        };  
+          
+        xmlhttp2.open("GET", url);
+        xmlhttp2.send();  
+      }
+      else
+        document.getElementById("hn").innerHTML = "Loading...";
+
+    };
+
+    xmlhttp.open("GET", "https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty", true);
+    xmlhttp.send();
+
+  </script>
+</body>
+
+</html>
