@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+
+    <style type="text/css">
+      body {
+          background-color: white;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <table id="demo" border="1"></table>
+
+    <script type="text/javascript">
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    myFunction(xhttp);
+                }
+            }
+            xhttp.open("GET", "7.xml", true);
+            xhttp.send();
+        }
+        
+        function myFunction(xml) {
+            var i;
+            var j;
+            var xmlDoc = xml.responseXML;
+            var table="<tr><th>id</th><th>Registration</th><th>Make</th><th>Model</th><th>Colour</th><th>Doors</th><th>Dealer</th><th>Driver Side</th></tr>";
+            var x = xmlDoc.getElementsByTagName("car");
+            for (i = 0; i <x.length; i++) {
+                table += "<tr><td>" +
+                x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("registration")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("make")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("model")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("colour")[0].childNodes[0].nodeValue +
+                "</td><td>";
+                for (j = 0; j < x[i].getElementsByTagName("door").length; j++) {
+                    if(j!=0)
+                        table+= ", " + x[i].getElementsByTagName("door")[j].childNodes[0].nodeValue;
+                    else
+                        table+= x[i].getElementsByTagName("door")[j].childNodes[0].nodeValue;
+                }
+                table += "</td><td>"+ x[i].getElementsByTagName("dealer")[0].childNodes[0].nodeValue +
+                "</td><td>" +x[i].getElementsByTagName("driveside")[0].childNodes[0].nodeValue +
+                "</td><tr>";
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+        loadDoc();
+    </script>
+
+  </body>
+
+</html>

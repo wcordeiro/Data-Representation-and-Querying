@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars>
+    <car>
+      <registration>152-G-123</registration>
+      <make>Ford</make>
+      <model>Fiesta</model>
+      <colour>Red</colour>
+      <doors>
+        <door>Driver</door>
+        <door>Right passenger</door>
+        <door>Left rear door</door>
+        <door>Right rear door</door>  
+      </doors>
+      <dealer>Cars&amp;Co</dealer>    
+    </car>
+    <car>
+      <registration>152-G-123</registration>
+      <make>Ford</make>
+      <model>Fiesta</model>
+      <colour>black</colour>
+      <doors>
+        <door>Driver</door>
+        <door>Right passenger</door>
+        <door>Left rear door</door>
+        <door>Right rear door</door>  
+      </doors>
+      <dealer>Steve's Cars</dealer>    
+    </car>
+</cars>
