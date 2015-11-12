@@ -127,29 +127,29 @@ Here's an example for the Salthill Beach in JSON format.
 And the equivalent in XML format:
 ```xml
 <Beach>
-    <ObjectID>IEWEBWC170_0000_0200<\ObjectID>
-    <Name>Salthill Beach<\Name>
+    <ObjectID>IEWEBWC170_0000_0200</ObjectID>
+    <Name>Salthill Beach</Name>
     <Lat>53.257 \Lat>
-    <Long>-9.091<\Long>
-    <EastITM>527186.209<\EastITM>
-    <NorthITM>723523.15<\NorthITM>
-    <EastIG>127219.731<\EastIG>
-    <NorthIG>223493.59<\NorthIG>
+    <Long>-9.091</Long>
+    <EastITM>527186.209</EastITM>
+    <NorthITM>723523.15</NorthITM>
+    <EastIG>127219.731</EastIG>
+    <NorthIG>223493.59</NorthIG>
     <Facilities>
-    	<Facilitie>Toilets<\Facilitie>
-        <Facilitie>Car Parking<\Facilitie>
-        <Facilitie>Disabled Access<\Facilitie>
-        <Facilitie>FirstAid<\Facilitie>
-        <Facilitie>Sensitive Area<\Facilitie>
-        <Facilitie>Livesaving<\Facilitie>
+    	<Facilitie>Toilets</Facilitie>
+        <Facilitie>Car Parking</Facilitie>
+        <Facilitie>Disabled Access</Facilitie>
+        <Facilitie>FirstAid</Facilitie>
+        <Facilitie>Sensitive Area</Facilitie>
+        <Facilitie>Livesaving</Facilitie>
     </Facilities>
-    <WaterDepth>5.5m<\WaterDepth>
-    <NumberofVisitors>2500<\NumberofVisitors>
+    <WaterDepth>5.5m</WaterDepth>
+    <NumberofVisitors>2500</NumberofVisitors>
     <Risks>
-    	<Risk>Gentian hill pumping station(Overflow)<\Risk>
-        <Risk>The mutton island waste water treatment(Polution)<\Risk>
-        <Risk>Recreational boating and charter shipping(Discharge/Polution)<\Risk>
-        <Risk>Rainwater discharges<\Risk>
+    	<Risk>Gentian hill pumping station(Overflow)</Risk>
+        <Risk>The mutton island waste water treatment(Polution)</Risk>
+        <Risk>Recreational boating and charter shipping(Discharge/Polution)</Risk>
+        <Risk>Rainwater discharges</Risk>
     </Risks>        
     <WaterQuality>Good</WaterQuality>
 </Beach>
