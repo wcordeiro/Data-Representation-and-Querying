@@ -105,13 +105,55 @@ Here's an example for the Salthill Beach in JSON format.
     "NorthITM": "723523.15",
     "EastIG": "127219.731",
     "NorthIG": "223493.59",
-    "Facilities": ["Toilets","Car Parking","Disabled Access","FirstAid","Sensitive Area","Livesaving"],
+    "Facilities":[
+                    "Toilets",
+                    "Car Parking",
+                    "Disabled Access",
+                    "FirstAid",
+                    "Sensitive Area",
+                    "Livesaving"
+                 ],
     "Water Depth": "5.5m",
     "Number of Visitors": "2500",
-    "Risks": ["Gentian hill pumping station(Overflow)","The mutton island waste water treatment(Polution)","Recreational boating and charter shipping(Discharge/Polution)","Rainwater discharges"],
+    "Risks":[
+                "Gentian hill pumping station(Overflow)",
+                "The mutton island waste water treatment(Polution)",
+                "Recreational boating and charter shipping(Discharge/Polution)",
+                "Rainwater discharges"
+            ],
     "Water Quality": "Good"
 }
-}
+```
+And the equivalent in XML format:
+```xml
+<Beach>
+    <ObjectID> IEWEBWC170_0000_0200 <\ObjectID>
+    <Name> Salthill Beach <\Name>
+    <Lat> 53.257 <\Lat>
+    <Long> -9.091<\Long>
+    <EastITM> 527186.209 <\EastITM>
+    <NorthITM> 723523.15 <\NorthITM>
+    <EastIG> 127219.731 <\EastIG>
+    <NorthIG> 223493.59 <\NorthIG>
+    <Facilities>
+    	<Facilitie> Toilets <\Facilitie>
+        <Facilitie> Car Parking <\Facilitie>
+        <Facilitie> Disabled Access <\Facilitie>
+        <Facilitie> FirstAid <\Facilitie>
+        <Facilitie> Sensitive Area <\Facilitie>
+        <Facilitie> Livesaving <\Facilitie>
+    </Facilities>
+    <Water Depth> 5.5m <\Water Depth>
+    <Number of Visitors> 2500 <\Number of Visitors>
+    <Risks>
+    	<Risk> Gentian hill pumping station(Overflow) <\Risk>
+        <Risk> The mutton island waste water treatment(Polution) <\Risk>
+        <Risk> Recreational boating and charter shipping(Discharge/Polution) <\Risk>
+        <Risk> Rainwater discharges <\Risk>
+    </Risks>        
+    <Water Quality> Good </Water Quality>
+</Beach>
+```
 
 
 
