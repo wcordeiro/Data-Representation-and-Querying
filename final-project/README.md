@@ -14,8 +14,8 @@ Both datasets are available at:
 2. [Bathing Water Compliance](https://data.gov.ie/dataset/bathing-water-compliance)
 
 For reference, I have attached the following files:
-    * Galway_City_Beaches.csv
-    * BWPR00198_2013_01_profile.pdf
-    * BWPR00217_2013_01_profile.pdf
-    * BWPR00265_2014_01_profile.pdf
-    * BWPR00307_2015_01_profile.pdf
+* ```Galway_City_Beaches.csv```
+* ```BWPR00198_2013_01_profile.pdf```
+* ```BWPR00217_2013_01_profile.pdf```
+* ```BWPR00265_2014_01_profile.pdf```
+* ```BWPR00307_2015_01_profile.pdf```
