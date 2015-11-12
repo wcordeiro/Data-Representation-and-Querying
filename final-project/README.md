@@ -21,7 +21,8 @@ For reference, I have attached the following files:
 * ```BWPR00307_2015_01_profile.pdf```
 
 ## Information about the datasets
-1. Galway Beaches
+
+#### * Galway Beaches
 
 The **Galway City Beaches** Dataset contains information about all of the public beaches that can be found in Galway City. This dataset is not particularly useful when used solely but could be integrated with another dataset or as a part of an application.
 The data is in CSV format (Comma Separated Values), obtained from [Galway City Beaches](https://data.gov.ie/dataset/galway-city-beaches).
@@ -50,7 +51,7 @@ The file cointains 4 unique rows. Each row has 8 fields with associated values.
 
 > _"The **Irish grid reference system** is a system of geographic grid references commonly used in Ireland (both Northern Ireland and the Republic of Ireland)."_
 
-2. Bathing Water Compliance
+##### * Bathing Water Compliance
 
 The **Bathing Water Compliance** Dataset is divided in four files and each file detailed information about Galway Beaches. This dataset was chosen as a compliment for the Galway City Beaches Dataset.
 The data is in four separeted files, each one has information about one of the Galway City main beaches. The files are in PDF format (Portable Document Format), obtained from [Bathing Water Compliance](https://data.gov.ie/dataset/bathing-water-compliance).
