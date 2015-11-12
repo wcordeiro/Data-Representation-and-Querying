@@ -26,6 +26,7 @@ The data is in CSV format (Comma Separated Values), obtained from [Galway City B
 
 ### Size, Fields & Values.
 The file cointains 4 unique rows. Each row has 8 fields with associated values.
+
 | Field         | Description     |
 |:-----:|:-------------------------------------------------------------:|
 | **ObjectID**  | An ID given to each park. |
