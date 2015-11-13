@@ -84,9 +84,9 @@ The response has the following properties:
 - **Name**:	Name of the beach
 - **Lat**: The latitude coordinate of the beach
 - **Long**: The longitude coordinate of the beach
-- **EastITM**: Irish Transverse Mercator (ITM) East value. *
+- **EastITM**: Irish Transverse Mercator (ITM) East value.
 - **NorthITM**: Irish Transverse Mercator (ITM) North vaule.
-- **EastIG**: East Irish Grid Reference number. **
+- **EastIG**: East Irish Grid Reference number.
 - **NorthIG**: North Irish Grid Reference number.
 - **Facilities**: List of the facilities in the beach eg.: Toilets,Disabled Access,Livesaving,etc.
 - **Water Depth**: The maximun depth of the water.
@@ -169,7 +169,11 @@ In this section I will be covering how to use HTTP methods in order to access th
 | **[criteria]** | The search criteria|
 
 This API use self-describing URL.
+
 You can use the GET or POST HTTP verbs on to do various actions.
+
+Due to the nature of the dataset, mainly because it is a dataset of beaches, users may not add or remove entries.
+
 When the urls are queried a JSON or XML object will be passed back.
 
 **General Action**
@@ -179,9 +183,9 @@ When the urls are queried a JSON or XML object will be passed back.
 - `http://galwaycitybeaches.com/beaches/risks`
 
 **Specific Action**
-- `http://galwaycitybeaches.com/beaches/Name`
-- `http://galwaycitybeaches.com/beaches/facilities/Name`
-- `http://galwaycitybeaches.com/beaches/risks/Name`
+- `http://galwaycitybeaches.com/beaches/[name]`
+- `http://galwaycitybeaches.com/beaches/facilities/[name]`
+- `http://galwaycitybeaches.com/beaches/risks/[name]`
 
 **Query URLs**
 - `http://galwaycitybeaches.com/beaches/?[filter]=[parameter]`
@@ -190,6 +194,7 @@ When the urls are queried a JSON or XML object will be passed back.
 - `http://galwaycitybeaches.com/beaches/most-popular/`
 - `http://galwaycitybeaches.com/beaches/water-quality/`
 - `http://galwaycitybeaches.com/beaches/no-polution-risk/`
+- `http://galwaycitybeaches.com/beaches/kids/`
 
 You might also want to limit the number of results returned by the POST method. This can be done using the following URL:
 
@@ -197,7 +202,23 @@ You might also want to limit the number of results returned by the POST method. 
 
 This returns the [number] closest beaches to the longitude and latitude used in the POST method.
 
-### Receiving A List of All Beaches
+## Examples of Use
+
+### General Action
+
+#### Basic API message
+
+`http://galwaycitybeaches.com/beaches/`
+
+**Sample:**
+
+```json
+{
+    "message": "Welcome to the beaches API"
+}
+```
+
+#### Receiving A List of All Beaches
 You can receive a list of all the beaches in Galway, using the HTTP POST method, at the following URL:
 
 `http://galwaycitybeaches.com/beaches/all`
@@ -275,7 +296,43 @@ In this case, using "all" after ".../beaches/" will return an array of all the p
 </Beaches>
 ```
 
-### Accessing Lists of Parks Using Filters
+### Specific Action
+
+#### Facilities on a specific beach
+
+`http://galwaycitybeaches.com/beaches/facilities/Ballyloughane+Beach`
+
+**Sample:**
+
+```json
+{
+    "Facilities":[
+                    "Toilets",
+                    "Car Parking",
+                    "Disabled Access",
+                    "FirstAid",
+                    "Livesaving"
+                 ]
+}
+```
+
+#### Risk on a Specific beach
+
+`http://galwaycitybeaches.com/beaches/facilities/Salthill+Beach/xml`
+
+**Sample:**
+
+```xml
+    <Risks>
+         <Risk>Gentian hill pumping station(Overflow)</Risk>
+         <Risk>The mutton island waste water treatment(Polution)</Risk>
+         <Risk>Recreational boating and charter shipping(Discharge/Polution)</Risk>
+         <Risk>Rainwater discharges</Risk>
+     </Risks>
+```
+### Query URL
+
+#### Accessing Lists of Parks Using Filters
 You can request a list of beaches based on a filter, by that I mean, all beaches where that specific filter is true, such as, toilets facilities using the HTTP GET method. The following is a URL example of the format you would use to achieve this.
 
 `http://galwaycitybeaches.com/beaches/?[filter]=[parameter]`
@@ -360,7 +417,7 @@ This would return an array of all the beaches that have a Water Quality mark as 
 </Beaches>
 ```
 
-#### Multiple Filters
+##### Multiple Filters
 To search for beachs in a more complet way, one can use more then one filter, is just as easy as using one filter.
 
 `http://galwaycitybeaches.com/beaches/?[filter]=[parameter]&[filter]=[parameter]`
@@ -463,6 +520,26 @@ This would return an array with the beaches, where both facilities are available
 </Beach>
 ```
 
+#### A list of Beaches Closest to Current Location
 
+`http://galwaycitybeaches.com/beaches/closet-long-lat/`
 
+This will return an array of all the beaches, starting with the beach that is closest to the longitude and latitude coordinates provided.
 
+#### A list of the most Populars beaches
+
+`http://galwaycitybeaches.com/beaches/most-popular/`
+
+This will return an array of all the beaches, starting with the most popular beach.
+
+#### A list sorted by water quality
+
+`http://galwaycitybeaches.com/beaches/water-quality/`
+
+This will return an array of all the beaches, sorted by the water quality.
+
+#### A list where beaches are sorted by Kids safety
+
+`http://galwaycitybeaches.com/beaches/kids/`
+
+This will return an array of all beaches, starting with the most secure beach for children. This information can be found evaluating the risks, facilities and water depth.
