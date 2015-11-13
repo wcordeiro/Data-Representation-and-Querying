@@ -74,7 +74,7 @@ Here is a breakdown of each field:
 
 ## Example Entry
 
-With this API, you can get the information returned in JSON or XML format using the GET method at the following URL:
+With this API, you can get the information returned in JSON (default) or XML format using the GET method at the following URL:
 
 `` http://galwaycitybeaches.com/beaches/[name] `` where the name section requires the user input.
 
@@ -136,12 +136,12 @@ And the equivalent in XML format:
     <EastIG>127219.731</EastIG>
     <NorthIG>223493.59</NorthIG>
     <Facilities>
-    	<Facilitie>Toilets</Facilitie>
-        <Facilitie>Car Parking</Facilitie>
-        <Facilitie>Disabled Access</Facilitie>
-        <Facilitie>FirstAid</Facilitie>
-        <Facilitie>Sensitive Area</Facilitie>
-        <Facilitie>Livesaving</Facilitie>
+    	<Facilitie>Toilets</Facility>
+       <Facility>Car Parking</Facility>
+       <Facility>Disabled Access</Facility>
+       <Facility>FirstAid</Facility>
+       <Facility>Sensitive Area</Facility>
+       <Facility>Livesaving</Facility>
     </Facilities>
     <WaterDepth>5.5m</WaterDepth>
     <NumberofVisitors>2500</NumberofVisitors>
@@ -154,9 +154,166 @@ And the equivalent in XML format:
     <WaterQuality>Good</WaterQuality>
 </Beach>
 ```
+## Accessing The Dataset
 
+### Receiving A List of All Beaches
+You can receive a list of all the beaches in Galway, using the HTTP POST method, at the following URL:
 
+`http://galwaycitybeaches.com/beaches/all`
 
+In this case, using "all" after ".../beaches/" will return an array of all the parks, in JSON format. The XML version can be obtain using `http://galwaycitybeaches.com/beaches/all/xml`
+
+*JSON Example:*
+```json
+[
+    {
+        "ObjectID": "IEWEBWC170_0000_0200",
+        "Name": "Salthill Beach",
+        "Lat": "53.257",
+        "Long": "-9.091",
+        "EastITM": "527186.209",
+        "NorthITM": "723523.15",
+        "EastIG": "127219.731",
+        "NorthIG": "223493.59",
+        "Facilities":[
+                        "Toilets",
+                        "Car Parking",
+                        "Disabled Access",
+                        "FirstAid",
+                        "Sensitive Area",
+                        "Livesaving"
+                     ],
+        "Water Depth": "5.5m",
+        "Number of Visitors": "2500",
+        "Risks":[
+                    "Gentian hill pumping station(Overflow)",
+                    "The mutton island waste water treatment(Polution)",
+                    "Recreational boating and charter shipping(Discharge/Polution)",
+                    "Rainwater discharges"
+                ],
+        "Water Quality": "Good"
+    },
+    { ... },
+    { ... }
+]
+```
+*XML Example:*
+```xml
+<Beaches>
+    <Beach>
+        <ObjectID>IEWEBWC170_0000_0200</ObjectID>
+        <Name>Salthill Beach</Name>
+        <Lat>53.257 \Lat>
+        <Long>-9.091</Long>
+        <EastITM>527186.209</EastITM>
+        <NorthITM>723523.15</NorthITM>
+        <EastIG>127219.731</EastIG>
+        <NorthIG>223493.59</NorthIG>
+        <Facilities>
+           <Facility>Toilets</Facility>
+           <Facility>Car Parking</Facility>
+           <Facility>Disabled Access</Facility>
+           <Facility>FirstAid</Facility>
+           <Facility>Sensitive Area</Facility>
+           <Facility>Livesaving</Facility>
+        </Facilities>
+        <WaterDepth>5.5m</WaterDepth>
+        <NumberofVisitors>2500</NumberofVisitors>
+        <Risks>
+            <Risk>Gentian hill pumping station(Overflow)</Risk>
+            <Risk>The mutton island waste water treatment(Polution)</Risk>
+            <Risk>Recreational boating and charter shipping(Discharge/Polution)</Risk>
+            <Risk>Rainwater discharges</Risk>
+        </Risks>        
+        <WaterQuality>Good</WaterQuality>
+    </Beach>
+    <Beach> ... </Beach>
+    <Beach> ... </Beach>
+</Beaches>
+```
+
+### Accessing Lists of Parks Using Filters
+You can request a list of beaches based on a filter, by that I mean, all beaches where that specific filter is true, such as, toilets facilities using the HTTP GET method. The following is a URL example of the format you would use to achieve this.
+
+`http://galwaycitybeaches.com/beaches/?[filter]=[parameter]`
+
+Now, replace [filter] with a field from the dataset, which could be any of the fields including: objectid, name, facility. etc.
+
+Then replace [parameter] with the results you are looking for.
+
+####Examples
+
+1. `http://galwaycitybeaches.com/beaches/?Name=Ballyloughane+Beach/`
+
+This would return the information about the Ballyloughane Beach in a JSON format.
+
+*Sample:*
+```json
+{
+    "ObjectID": "IEWEBWT170_0700_0200",
+    "Name": "Ballyloughane Beach",
+    "Lat": "53.27",
+    "Long": "-9.018",
+    "EastITM": "532120.388",
+    "NorthITM": "724841.274",
+    "EastIG": "132154.971",
+    "NorthIG": "224812.027",
+    "Facilities":[
+                    "Toilets",
+                    "Car Parking",
+                    "Disabled Access",
+                    "FirstAid",
+                    "Livesaving"
+                 ],
+    "Water Depth": "1.0m",
+    "Number of Visitors": "500",
+    "Risks":[
+                "Waste Water Treatment plant(Polution)",
+                "Public Toilets and On site waste water treatment systems(Polution)",
+                "Surface Water Outfalls and Storm Overflow"
+            ],
+    "Water Quality": "Poor"
+}
+```
+
+2. `http://galwaycitybeaches.com/beaches/?WaterQuality=Good/`
+
+This would return an array of all the beaches that have a Water Quality mark as Good, in JSON format. If there isn't any park with that location, an empty array is returned.
+
+*Sample:*
+```json
+[
+    {
+        "ObjectID": "IEWEBWC170_0000_0200",
+        "Name": "Salthill Beach",
+        "Lat": "53.257",
+        "Long": "-9.091",
+        "EastITM": "527186.209",
+        "NorthITM": "723523.15",
+        "EastIG": "127219.731",
+        "NorthIG": "223493.59",
+        "Facilities":[
+                        "Toilets",
+                        "Car Parking",
+                        "Disabled Access",
+                        "FirstAid",
+                        "Sensitive Area",
+                        "Livesaving"
+                     ],
+        "Water Depth": "5.5m",
+        "Number of Visitors": "2500",
+        "Risks":[
+                    "Gentian hill pumping station(Overflow)",
+                    "The mutton island waste water treatment(Polution)",
+                    "Recreational boating and charter shipping(Discharge/Polution)",
+                    "Rainwater discharges"
+                ],
+        "Water Quality": "Good"
+    },
+    { ... },
+    { ... }
+]
+```
 
 
 
