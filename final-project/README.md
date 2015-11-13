@@ -248,6 +248,7 @@ Then replace [parameter] with the results you are looking for.
 This would return the information about the Ballyloughane Beach in a JSON format.
 
 *Sample:*
+
 ```json
 {
     "ObjectID": "IEWEBWT170_0700_0200",
@@ -281,6 +282,7 @@ This would return the information about the Ballyloughane Beach in a JSON format
 This would return an array of all the beaches that have a Water Quality mark as Good, in a XML format. If there isn't any beach with that filter, an empty array is returned.
 
 *Sample:*
+
 ```xml
 <Beaches>
     <Beach>
@@ -327,6 +329,7 @@ To search for beachs in a more complet way, one can use more then one filter, is
 This would return an array with the beaches, where both facilities are available. In this particular case the array contains Salthill Beach and Silverstrand beach. 
 
 *Sample*
+
 ```json
 [
     {
@@ -387,6 +390,7 @@ This would return an array with the beaches, where both facilities are available
 2. `http://galwaycitybeaches.com/beaches/?WaterDepth=2&NumberofVisitors=600/xml`
 
 *Sample*
+
 ```xml
 <Beach>
     <ObjectID>IEWEBWC170_0000_0100</ObjectID>
