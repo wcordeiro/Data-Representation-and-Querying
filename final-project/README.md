@@ -95,6 +95,7 @@ The response has the following properties:
 - **Water Quality**: Status of the bathing water.
 
 Here's an example for the Salthill Beach in JSON format.
+
 ```json
 {
     "ObjectID": "IEWEBWC170_0000_0200",
@@ -125,6 +126,7 @@ Here's an example for the Salthill Beach in JSON format.
 }
 ```
 And the equivalent in XML format:
+
 ```xml
 <Beach>
     <ObjectID>IEWEBWC170_0000_0200</ObjectID>
@@ -163,7 +165,8 @@ You can receive a list of all the beaches in Galway, using the HTTP POST method,
 
 In this case, using "all" after ".../beaches/" will return an array of all the parks, in JSON format. The XML version can be obtain using `http://galwaycitybeaches.com/beaches/all/xml`
 
-*JSON Example:*
+**JSON Example:**
+
 ```json
 [
     {
@@ -197,7 +200,8 @@ In this case, using "all" after ".../beaches/" will return an array of all the p
     { ... }
 ]
 ```
-*XML Example:*
+**XML Example:**
+
 ```xml
 <Beaches>
     <Beach>
@@ -247,7 +251,7 @@ Then replace [parameter] with the results you are looking for.
 
 This would return the information about the Ballyloughane Beach in a JSON format.
 
-*Sample:*
+**Sample:**
 
 ```json
 {
@@ -281,7 +285,7 @@ This would return the information about the Ballyloughane Beach in a JSON format
 
 This would return an array of all the beaches that have a Water Quality mark as Good, in a XML format. If there isn't any beach with that filter, an empty array is returned.
 
-*Sample:*
+**Sample:**
 
 ```xml
 <Beaches>
@@ -328,7 +332,7 @@ To search for beachs in a more complet way, one can use more then one filter, is
 
 This would return an array with the beaches, where both facilities are available. In this particular case the array contains Salthill Beach and Silverstrand beach. 
 
-*Sample*
+**Sample**
 
 ```json
 [
@@ -389,7 +393,7 @@ This would return an array with the beaches, where both facilities are available
 ```
 2. `http://galwaycitybeaches.com/beaches/?WaterDepth=2&NumberofVisitors=600/xml`
 
-*Sample*
+**Sample**
 
 ```xml
 <Beach>
