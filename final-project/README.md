@@ -29,7 +29,7 @@ The **Galway City Beaches** Dataset contains information about all of the public
 The data is in CSV format (Comma Separated Values), obtained from [Galway City Beaches](https://data.gov.ie/dataset/galway-city-beaches).
 
 #### Size, Fields & Values.
-The file cointains 4 unique rows. Each row has 8 fields with associated values.
+The file contains 4 unique rows. Each row has 8 fields with associated values.
 
 | Field         | Description     |
 |:-----:|:-------------------------------------------------------------:|
@@ -38,7 +38,7 @@ The file cointains 4 unique rows. Each row has 8 fields with associated values.
 | **Lat**       | The latitude coordinate of the beach  |
 | **Long**      | The longitude coordinate of the beach |
 | **EastITM**   | Irish Transverse Mercator (ITM) East value. * | 
-| **NorthITM**  | Irish Transverse Mercator (ITM) North vaule.  | 
+| **NorthITM**  | Irish Transverse Mercator (ITM) North value.  | 
 | **EastIG**    | East Irish Grid Reference number. ** |
 | **NorthIG**   | North Irish Grid Reference number. |
 
@@ -56,7 +56,7 @@ The file cointains 4 unique rows. Each row has 8 fields with associated values.
 
 The **Bathing Water Compliance** Dataset is divided in four files and each file detailed information about Galway Beaches. This dataset was chosen as a compliment for the Galway City Beaches Dataset.
 
-The data is in four separeted files, each one has information about one of the Galway City main beaches. The files are in PDF format (Portable Document Format), obtained from [Bathing Water Compliance](https://data.gov.ie/dataset/bathing-water-compliance).
+The data is in four separated files, each one has information about one of the Galway City main beaches. The files are in PDF format (Portable Document Format), obtained from [Bathing Water Compliance](https://data.gov.ie/dataset/bathing-water-compliance).
 
 #### Size, Fields & Values.
 Only a few information of this dataset are going to be used in this API.
@@ -66,9 +66,9 @@ Here is a breakdown of each field:
 |:--------:|:--------------------------------:|
 | **Bathing Water** | Name of the beach. |
 | **Bathing Water Code** | An ID given to each beach. |
-| **Facilities** | Facilities in the beach eg.: Toilets, Disabled Access, Livesaving, etc. |
+| **Facilities** | Facilities in the beach eg.: Toilets, Disabled Access, Lifesaving, etc. |
 | **Water Depth** | The maximum depth of the water. |
-| **Number of visitors** | Maximun number of visitors in high season. |
+| **Number of visitors** | Maximum number of visitors in high season. |
 | **Risks** | Risks that may be found on the beach. |
 | **Water Quality** | Status of the bathing water. |
 
@@ -88,9 +88,9 @@ The response has the following properties:
 - **NorthITM**: Irish Transverse Mercator (ITM) North vaule.
 - **EastIG**: East Irish Grid Reference number.
 - **NorthIG**: North Irish Grid Reference number.
-- **Facilities**: List of the facilities in the beach eg.: Toilets,Disabled Access,Livesaving,etc.
-- **Water Depth**: The maximun depth of the water.
-- **Number of visitors**: Maximun number of visitors in high seanson.
+- **Facilities**: List of the facilities in the beach eg.: Toilets,Disabled Access,Lifesaving,etc.
+- **Water Depth**: The maximum depth of the water.
+- **Number of visitors**: Maximum number of visitors in high season.
 - **Risks**: List of risks that may be found on the beach.
 - **Water Quality**: Status of the bathing water.
 
@@ -112,14 +112,14 @@ The response has the following properties:
                     "Disabled Access",
                     "FirstAid",
                     "Sensitive Area",
-                    "Livesaving"
+                    "Lifesaving"
                  ],
     "Water Depth": "5.5m",
     "Number of Visitors": "2500",
     "Risks":[
                 "Gentian hill pumping station(Overflow)",
-                "The mutton island waste water treatment(Polution)",
-                "Recreational boating and charter shipping(Discharge/Polution)",
+                "The mutton island waste water treatment(Pollution)",
+                "Recreational boating and charter shipping(Discharge/Pollution)",
                 "Rainwater discharges"
             ],
     "Water Quality": "Good"
@@ -138,19 +138,19 @@ The response has the following properties:
     <EastIG>127219.731</EastIG>
     <NorthIG>223493.59</NorthIG>
     <Facilities>
-    	<Facilitie>Toilets</Facility>
+    	<Facility>Toilets</Facility>
        <Facility>Car Parking</Facility>
        <Facility>Disabled Access</Facility>
        <Facility>FirstAid</Facility>
        <Facility>Sensitive Area</Facility>
-       <Facility>Livesaving</Facility>
+       <Facility>Lifesaving</Facility>
     </Facilities>
     <WaterDepth>5.5m</WaterDepth>
     <NumberofVisitors>2500</NumberofVisitors>
     <Risks>
     	<Risk>Gentian hill pumping station(Overflow)</Risk>
-        <Risk>The mutton island waste water treatment(Polution)</Risk>
-        <Risk>Recreational boating and charter shipping(Discharge/Polution)</Risk>
+        <Risk>The mutton island waste water treatment(Pollution)</Risk>
+        <Risk>Recreational boating and charter shipping(Discharge/Pollution)</Risk>
         <Risk>Rainwater discharges</Risk>
     </Risks>        
     <WaterQuality>Good</WaterQuality>
@@ -163,7 +163,7 @@ In this section I will be covering how to use HTTP methods in order to access th
 | URL Section | Description |
 |:-----------:|:-----------:|
 | **http** | Protocol used |
-| **www** | SubDomain |
+| **www** | Subdomain |
 | **galwaycitybeaches.com** | Domain |
 | **beaches** | Path |
 | **[criteria]** | The search criteria|
@@ -193,7 +193,7 @@ When the urls are queried a JSON or XML object will be passed back.
 - `http://galwaycitybeaches.com/beaches/closet-long-lat/`
 - `http://galwaycitybeaches.com/beaches/most-popular/`
 - `http://galwaycitybeaches.com/beaches/water-quality/`
-- `http://galwaycitybeaches.com/beaches/no-polution-risk/`
+- `http://galwaycitybeaches.com/beaches/no-Pollution-risk/`
 - `http://galwaycitybeaches.com/beaches/kids/`
 
 You might also want to limit the number of results returned by the POST method. This can be done using the following URL:
@@ -244,14 +244,14 @@ In this case, using "all" after ".../beaches/" will return an array of all the p
                         "Disabled Access",
                         "FirstAid",
                         "Sensitive Area",
-                        "Livesaving"
+                        "Lifesaving"
                      ],
         "Water Depth": "5.5m",
         "Number of Visitors": "2500",
         "Risks":[
                     "Gentian hill pumping station(Overflow)",
-                    "The mutton island waste water treatment(Polution)",
-                    "Recreational boating and charter shipping(Discharge/Polution)",
+                    "The mutton island waste water treatment(Pollution)",
+                    "Recreational boating and charter shipping(Discharge/Pollution)",
                     "Rainwater discharges"
                 ],
         "Water Quality": "Good"
@@ -279,14 +279,14 @@ In this case, using "all" after ".../beaches/" will return an array of all the p
            <Facility>Disabled Access</Facility>
            <Facility>FirstAid</Facility>
            <Facility>Sensitive Area</Facility>
-           <Facility>Livesaving</Facility>
+           <Facility>Lifesaving</Facility>
         </Facilities>
         <WaterDepth>5.5m</WaterDepth>
         <NumberofVisitors>2500</NumberofVisitors>
         <Risks>
             <Risk>Gentian hill pumping station(Overflow)</Risk>
-            <Risk>The mutton island waste water treatment(Polution)</Risk>
-            <Risk>Recreational boating and charter shipping(Discharge/Polution)</Risk>
+            <Risk>The mutton island waste water treatment(Pollution)</Risk>
+            <Risk>Recreational boating and charter shipping(Discharge/Pollution)</Risk>
             <Risk>Rainwater discharges</Risk>
         </Risks>        
         <WaterQuality>Good</WaterQuality>
@@ -311,7 +311,7 @@ In this case, using "all" after ".../beaches/" will return an array of all the p
                     "Car Parking",
                     "Disabled Access",
                     "FirstAid",
-                    "Livesaving"
+                    "Lifesaving"
                  ]
 }
 ```
@@ -323,12 +323,12 @@ In this case, using "all" after ".../beaches/" will return an array of all the p
 **Sample:**
 
 ```xml
-    <Risks>
-         <Risk>Gentian hill pumping station(Overflow)</Risk>
-         <Risk>The mutton island waste water treatment(Polution)</Risk>
-         <Risk>Recreational boating and charter shipping(Discharge/Polution)</Risk>
-         <Risk>Rainwater discharges</Risk>
-     </Risks>
+<Risks>
+    <Risk>Gentian hill pumping station(Overflow)</Risk>
+    <Risk>The mutton island waste water treatment(Pollution)</Risk>
+    <Risk>Recreational boating and charter shipping(Discharge/Pollution)</Risk>
+    <Risk>Rainwater discharges</Risk>
+</Risks>
 ```
 ### Query URL
 
@@ -364,13 +364,13 @@ This would return the information about the Ballyloughane Beach in a JSON format
                     "Car Parking",
                     "Disabled Access",
                     "FirstAid",
-                    "Livesaving"
+                    "Lifesaving"
                  ],
     "Water Depth": "1.0m",
     "Number of Visitors": "500",
     "Risks":[
-                "Waste Water Treatment plant(Polution)",
-                "Public Toilets and On site waste water treatment systems(Polution)",
+                "Waste Water Treatment plant(Pollution)",
+                "Public Toilets and On site waste water treatment systems(Pollution)",
                 "Surface Water Outfalls and Storm Overflow"
             ],
     "Water Quality": "Poor"
@@ -400,14 +400,14 @@ This would return an array of all the beaches that have a Water Quality mark as 
            <Facility>Disabled Access</Facility>
            <Facility>FirstAid</Facility>
            <Facility>Sensitive Area</Facility>
-           <Facility>Livesaving</Facility>
+           <Facility>Lifesaving</Facility>
         </Facilities>
         <WaterDepth>5.5m</WaterDepth>
         <NumberofVisitors>2500</NumberofVisitors>
         <Risks>
             <Risk>Gentian hill pumping station(Overflow)</Risk>
-            <Risk>The mutton island waste water treatment(Polution)</Risk>
-            <Risk>Recreational boating and charter shipping(Discharge/Polution)</Risk>
+            <Risk>The mutton island waste water treatment(Pollution)</Risk>
+            <Risk>Recreational boating and charter shipping(Discharge/Pollution)</Risk>
             <Risk>Rainwater discharges</Risk>
         </Risks>        
         <WaterQuality>Good</WaterQuality>
@@ -418,7 +418,7 @@ This would return an array of all the beaches that have a Water Quality mark as 
 ```
 
 ##### Multiple Filters
-To search for beachs in a more complet way, one can use more then one filter, is just as easy as using one filter.
+To search for beaches in a more complete way, one can use more than one filter, is just as easy as using one filter.
 
 `http://galwaycitybeaches.com/beaches/?[filter]=[parameter]&[filter]=[parameter]`
 
@@ -447,14 +447,14 @@ This would return an array with the beaches, where both facilities are available
                         "Disabled Access",
                         "FirstAid",
                         "Sensitive Area",
-                        "Livesaving"
+                        "Lifesaving"
                      ],
         "Water Depth": "5.5m",
         "Number of Visitors": "2500",
         "Risks":[
                     "Gentian hill pumping station(Overflow)",
-                    "The mutton island waste water treatment(Polution)",
-                    "Recreational boating and charter shipping(Discharge/Polution)",
+                    "The mutton island waste water treatment(Pollution)",
+                    "Recreational boating and charter shipping(Discharge/Pollution)",
                     "Rainwater discharges"
                 ],
         "Water Quality": "Good"
@@ -474,14 +474,14 @@ This would return an array with the beaches, where both facilities are available
                         "Disabled Access",
                         "FirstAid",
                         "Sensitive Area",
-                        "Livesaving"
+                        "Lifesaving"
                      ],
         "Water Depth": "2m",
         "Number of Visitors": "600",
         "Risks":[
-                    "Public Toilets - on-site waste water treatment system(Polution)",
-                    "Waste Water Treatment plant(Polution)",
-                    "Gentian Hill Pumping Station(Overflow/Polution)"
+                    "Public Toilets - on-site waste water treatment system(Pollution)",
+                    "Waste Water Treatment plant(Pollution)",
+                    "Gentian Hill Pumping Station(Overflow/Pollution)"
                 ],
         "Water Quality": "Good" 
         }
@@ -507,14 +507,14 @@ This would return an array with the beaches, where both facilities are available
        <Facility>Disabled Access</Facility>
        <Facility>FirstAid</Facility>
        <Facility>Sensitive Area</Facility>
-       <Facility>Livesaving</Facility>
+       <Facility>Lifesaving</Facility>
     </Facilities>
     <WaterDepth>2m</WaterDepth>
     <NumberofVisitors>600</NumberofVisitors>
     <Risks>
-        <Risk>Public Toilets - on-site waste water treatment system(Polution)</Risk>
-        <Risk>Waste Water Treatment plant(Polution)</Risk>
-        <Risk>Gentian Hill Pumping Station(Overflow/Polution)</Risk>
+        <Risk>Public Toilets - on-site waste water treatment system(Pollution)</Risk>
+        <Risk>Waste Water Treatment plant(Pollution)</Risk>
+        <Risk>Gentian Hill Pumping Station(Overflow/Pollution)</Risk>
     </Risks>        
     <WaterQuality>Good</WaterQuality>
 </Beach>
@@ -526,7 +526,7 @@ This would return an array with the beaches, where both facilities are available
 
 This will return an array of all the beaches, starting with the beach that is closest to the longitude and latitude coordinates provided.
 
-#### A list of the most Populars beaches
+#### A list of beaches sorted by popularity 
 
 `http://galwaycitybeaches.com/beaches/most-popular/`
 
