@@ -94,7 +94,7 @@ The response has the following properties:
 - **Risks**: List of risks that may be found on the beach.
 - **Water Quality**: Status of the bathing water.
 
-Here's an example for the Salthill Beach in JSON format.
+**Here's an example for the Salthill Beach in JSON format.**
 
 ```json
 {
@@ -125,7 +125,7 @@ Here's an example for the Salthill Beach in JSON format.
     "Water Quality": "Good"
 }
 ```
-And the equivalent in XML format:
+**And the equivalent in XML format:**
 
 ```xml
 <Beach>
@@ -332,7 +332,7 @@ To search for beachs in a more complet way, one can use more then one filter, is
 
 This would return an array with the beaches, where both facilities are available. In this particular case the array contains Salthill Beach and Silverstrand beach. 
 
-**Sample**
+**Sample:**
 
 ```json
 [
@@ -393,7 +393,7 @@ This would return an array with the beaches, where both facilities are available
 ```
 2. `http://galwaycitybeaches.com/beaches/?WaterDepth=2&NumberofVisitors=600/xml`
 
-**Sample**
+**Sample:**
 
 ```xml
 <Beach>
