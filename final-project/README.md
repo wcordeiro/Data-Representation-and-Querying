@@ -129,7 +129,7 @@ And the equivalent in XML format:
 <Beach>
     <ObjectID>IEWEBWC170_0000_0200</ObjectID>
     <Name>Salthill Beach</Name>
-    <Lat>53.257 \Lat>
+    <Lat>53.257 <\Lat>
     <Long>-9.091</Long>
     <EastITM>527186.209</EastITM>
     <NorthITM>723523.15</NorthITM>
@@ -203,7 +203,7 @@ In this case, using "all" after ".../beaches/" will return an array of all the p
     <Beach>
         <ObjectID>IEWEBWC170_0000_0200</ObjectID>
         <Name>Salthill Beach</Name>
-        <Lat>53.257 \Lat>
+        <Lat>53.257 <\Lat>
         <Long>-9.091</Long>
         <EastITM>527186.209</EastITM>
         <NorthITM>723523.15</NorthITM>
@@ -241,7 +241,7 @@ Now, replace [filter] with a field from the dataset, which could be any of the f
 
 Then replace [parameter] with the results you are looking for.
 
-####Examples
+#####Examples
 
 1. `http://galwaycitybeaches.com/beaches/?Name=Ballyloughane+Beach/`
 
@@ -276,11 +276,57 @@ This would return the information about the Ballyloughane Beach in a JSON format
 }
 ```
 
-2. `http://galwaycitybeaches.com/beaches/?WaterQuality=Good/`
+2. `http://galwaycitybeaches.com/beaches/?WaterQuality=Good/xml`
 
-This would return an array of all the beaches that have a Water Quality mark as Good, in JSON format. If there isn't any park with that location, an empty array is returned.
+This would return an array of all the beaches that have a Water Quality mark as Good, in a XML format. If there isn't any beach with that filter, an empty array is returned.
 
 *Sample:*
+```xml
+<Beaches>
+    <Beach>
+        <ObjectID>IEWEBWC170_0000_0200</ObjectID>
+        <Name>Salthill Beach</Name>
+        <Lat>53.257 \Lat>
+        <Long>-9.091</Long>
+        <EastITM>527186.209</EastITM>
+        <NorthITM>723523.15</NorthITM>
+        <EastIG>127219.731</EastIG>
+        <NorthIG>223493.59</NorthIG>
+        <Facilities>
+           <Facility>Toilets</Facility>
+           <Facility>Car Parking</Facility>
+           <Facility>Disabled Access</Facility>
+           <Facility>FirstAid</Facility>
+           <Facility>Sensitive Area</Facility>
+           <Facility>Livesaving</Facility>
+        </Facilities>
+        <WaterDepth>5.5m</WaterDepth>
+        <NumberofVisitors>2500</NumberofVisitors>
+        <Risks>
+            <Risk>Gentian hill pumping station(Overflow)</Risk>
+            <Risk>The mutton island waste water treatment(Polution)</Risk>
+            <Risk>Recreational boating and charter shipping(Discharge/Polution)</Risk>
+            <Risk>Rainwater discharges</Risk>
+        </Risks>        
+        <WaterQuality>Good</WaterQuality>
+    </Beach>
+    <Beach> ... </Beach>
+    <Beach> ... </Beach>
+</Beaches>
+```
+
+#### Multiple Filters
+To search for beachs in a more complet way, one can use more then one filter, is just as easy as using one filter.
+
+`http://galwaycitybeaches.com/beaches/?[filter]=[parameter]&[filter]=[parameter]`
+
+#####Examples
+
+1. `http://galwaycitybeaches.com/beaches/?facility=Toiles&facility=Sensitive+Area/`
+
+This would return an array with the beaches, where both facilities are available. In this particular case the array contains Salthill Beach and Silverstrand beach. 
+
+*Sample*
 ```json
 [
     {
@@ -310,11 +356,65 @@ This would return an array of all the beaches that have a Water Quality mark as 
                 ],
         "Water Quality": "Good"
     },
-    { ... },
-    { ... }
+    { 
+        "ObjectID": "IEWEBWC170_0000_0100",
+        "Name": "Silverstrand Beach",
+        "Lat": "53.251",
+        "Long": "-9.128",
+        "EastITM": "524694.732",
+        "NorthITM": "722864.026",
+        "EastIG": "12727.719",
+        "NorthIG": "222834.31",
+        "Facilities":[
+                        "Toilets",
+                        "Car Parking",
+                        "Disabled Access",
+                        "FirstAid",
+                        "Sensitive Area",
+                        "Livesaving"
+                     ],
+        "Water Depth": "2m",
+        "Number of Visitors": "600",
+        "Risks":[
+                    "Public Toilets - on-site waste water treatment system(Polution)",
+                    "Waste Water Treatment plant(Polution)",
+                    "Gentian Hill Pumping Station(Overflow/Polution)"
+                ],
+        "Water Quality": "Good" 
+        }
 ]
 ```
+2. `http://galwaycitybeaches.com/beaches/?WaterDepth=2&NumberofVisitors=600/xml`
 
+*Sample*
+```xml
+<Beach>
+    <ObjectID>IEWEBWC170_0000_0100</ObjectID>
+    <Name>Silverstrand Beach</Name>
+    <Lat>53.251<\Lat>
+    <Long>-9.128</Long>
+    <EastITM>524694.732</EastITM>
+    <NorthITM>722864.026</NorthITM>
+    <EastIG>12727.719</EastIG>
+    <NorthIG>222834.31</NorthIG>
+    <Facilities>
+       <Facility>Toilets</Facility>
+       <Facility>Car Parking</Facility>
+       <Facility>Disabled Access</Facility>
+       <Facility>FirstAid</Facility>
+       <Facility>Sensitive Area</Facility>
+       <Facility>Livesaving</Facility>
+    </Facilities>
+    <WaterDepth>2m</WaterDepth>
+    <NumberofVisitors>600</NumberofVisitors>
+    <Risks>
+        <Risk>Public Toilets - on-site waste water treatment system(Polution)</Risk>
+        <Risk>Waste Water Treatment plant(Polution)</Risk>
+        <Risk>Gentian Hill Pumping Station(Overflow/Polution)</Risk>
+    </Risks>        
+    <WaterQuality>Good</WaterQuality>
+</Beach>
+```
 
 
 
