@@ -158,6 +158,45 @@ The response has the following properties:
 ```
 ## Accessing The Dataset
 
+In this section I will be covering how to use HTTP methods in order to access the information.
+
+| URL Section | Description |
+|:-----------:|:-----------:|
+| **http** | Protocol used |
+| **www** | SubDomain |
+| **galwaycitybeaches.com** | Domain |
+| **beaches** | Path |
+| **[criteria]** | The search criteria|
+
+This API use self-describing URL.
+You can use the GET or POST HTTP verbs on to do various actions.
+When the urls are queried a JSON or XML object will be passed back.
+
+**General Action**
+- `http://galwaycitybeaches.com/beaches/`
+- `http://galwaycitybeaches.com/beaches/all`
+- `http://galwaycitybeaches.com/beaches/facilities`
+- `http://galwaycitybeaches.com/beaches/risks`
+
+**Specific Action**
+- `http://galwaycitybeaches.com/beaches/Name`
+- `http://galwaycitybeaches.com/beaches/facilities/Name`
+- `http://galwaycitybeaches.com/beaches/risks/Name`
+
+**Query URLs**
+- `http://galwaycitybeaches.com/beaches/?[filter]=[parameter]`
+- `http://galwaycitybeaches.com/beaches/?[filter]=[parameter]&[filter]=[parameter]`
+- `http://galwaycitybeaches.com/beaches/closet-long-lat/`
+- `http://galwaycitybeaches.com/beaches/most-popular/`
+- `http://galwaycitybeaches.com/beaches/water-quality/`
+- `http://galwaycitybeaches.com/beaches/no-polution-risk/`
+
+You might also want to limit the number of results returned by the POST method. This can be done using the following URL:
+
+- `http://galwaycitybeaches.com/beaches/closet-long-lat/[number]`
+
+This returns the [number] closest beaches to the longitude and latitude used in the POST method.
+
 ### Receiving A List of All Beaches
 You can receive a list of all the beaches in Galway, using the HTTP POST method, at the following URL:
 
