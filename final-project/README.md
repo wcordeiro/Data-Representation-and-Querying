@@ -54,7 +54,7 @@ The file contains 4 unique rows. Each row has 8 fields with associated values.
 
 ### Bathing Water Compliance
 
-The **Bathing Water Compliance** Dataset is divided in four files and each file detailed information about Galway Beaches. This dataset was chosen as a compliment for the Galway City Beaches Dataset.
+The **Bathing Water Compliance** Dataset is divided in four files and each file detailed information about Galway Beaches. This dataset was chosen as a complement for the Galway City Beaches Dataset.
 
 The data is in four separated files, each one has information about one of the Galway City main beaches. The files are in PDF format (Portable Document Format), obtained from [Bathing Water Compliance](https://data.gov.ie/dataset/bathing-water-compliance).
 
@@ -223,7 +223,7 @@ You can receive a list of all the beaches in Galway, using the HTTP POST method,
 
 `http://galwaycitybeaches.com/beaches/all`
 
-In this case, using "all" after ".../beaches/" will return an array of all the parks, in JSON format. The XML version can be obtain using `http://galwaycitybeaches.com/beaches/all/xml`
+In this case, using "all" after ".../beaches/" will return an array of all the beaches, in JSON format. The XML version can be obtain using `http://galwaycitybeaches.com/beaches/all/xml`
 
 **JSON Example:**
 
@@ -332,7 +332,7 @@ In this case, using "all" after ".../beaches/" will return an array of all the p
 ```
 ### Query URL
 
-#### Accessing Lists of Parks Using Filters
+#### Accessing Lists of Beaches Using Filters
 You can request a list of beaches based on a filter, by that I mean, all beaches where that specific filter is true, such as, toilets facilities using the HTTP GET method. The following is a URL example of the format you would use to achieve this.
 
 `http://galwaycitybeaches.com/beaches/?[filter]=[parameter]`
